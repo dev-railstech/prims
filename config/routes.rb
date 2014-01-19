@@ -1,4 +1,8 @@
 Prms::Application.routes.draw do
+  resources :products
+
+  resources :nominals
+
   resources :dealers
 
   resources :account_managers

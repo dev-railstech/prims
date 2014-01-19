@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @nominal.code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @nominal.description %>
+</p>
+
+<%= link_to 'Edit', edit_nominal_path(@nominal) %> |
+<%= link_to 'Back', nominals_path %>

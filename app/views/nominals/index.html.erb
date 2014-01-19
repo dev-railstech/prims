@@ -1,0 +1,29 @@
+<h1>Listing nominals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nominals.each do |nominal| %>
+      <tr>
+        <td><%= nominal.code %></td>
+        <td><%= nominal.description %></td>
+        <td><%= link_to 'Show', nominal %></td>
+        <td><%= link_to 'Edit', edit_nominal_path(nominal) %></td>
+        <td><%= link_to 'Destroy', nominal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nominal', new_nominal_path %>
