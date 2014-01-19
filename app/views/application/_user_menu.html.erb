@@ -1,0 +1,9 @@
+<li class="pull-right dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= current_user.full_name %> <strong class="caret"></strong></a>
+  <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+    <!-- Login form here -->
+    <li><%= link_to 'Change Password', edit_user_registration_path %></li>
+    <li><%= link_to "Help" %></li>
+    <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+  </ul>
+</li>

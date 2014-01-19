@@ -1,0 +1,31 @@
+<h1>Listing account_managers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Joining date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_managers.each do |account_manager| %>
+      <tr>
+        <td><%= account_manager.code %></td>
+        <td><%= account_manager.name %></td>
+        <td><%= account_manager.joining_date %></td>
+        <td><%= link_to 'Show', account_manager %></td>
+        <td><%= link_to 'Edit', edit_account_manager_path(account_manager) %></td>
+        <td><%= link_to 'Destroy', account_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account manager', new_account_manager_path %>

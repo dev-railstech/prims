@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Address 1:</strong>
+  <%= @company.address_1 %>
+</p>
+
+<p>
+  <strong>Address 2:</strong>
+  <%= @company.address_2 %>
+</p>
+
+<p>
+  <strong>Address 3:</strong>
+  <%= @company.address_3 %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @company.post_code %>
+</p>
+
+<p>
+  <strong>Current period:</strong>
+  <%= @company.current_period %>
+</p>
+
+<p>
+  <strong>Date on:</strong>
+  <%= @company.date_on %>
+</p>
+
+<p>
+  <strong>Date last run:</strong>
+  <%= @company.date_last_run %>
+</p>
+
+<p>
+  <strong>Next bill no:</strong>
+  <%= @company.next_bill_no %>
+</p>
+
+<p>
+  <strong>Current year:</strong>
+  <%= @company.current_year %>
+</p>
+
+<p>
+  <strong>Next contract number:</strong>
+  <%= @company.next_contract_number %>
+</p>
+
+<p>
+  <strong>Next allocation number:</strong>
+  <%= @company.next_allocation_number %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

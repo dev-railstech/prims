@@ -1,0 +1,29 @@
+<%= form_for(@account_manager) do |f| %>
+  <% if @account_manager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account_manager.errors.count, "error") %> prohibited this account_manager from being saved:</h2>
+
+      <ul>
+      <% @account_manager.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :joining_date %><br>
+    <%= f.date_select :joining_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

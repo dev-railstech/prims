@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @account_manager.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account_manager.name %>
+</p>
+
+<p>
+  <strong>Joining date:</strong>
+  <%= @account_manager.joining_date %>
+</p>
+
+<%= link_to 'Edit', edit_account_manager_path(@account_manager) %> |
+<%= link_to 'Back', account_managers_path %>
