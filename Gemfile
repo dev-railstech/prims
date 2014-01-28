@@ -10,6 +10,12 @@ end
 
 gem 'pg'
 
+gem 'roo'
+
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
+gem 'bootstrap-datepicker-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

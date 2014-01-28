@@ -1,0 +1,41 @@
+<%= form_for(@allocation) do |f| %>
+  <% if @allocation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@allocation.errors.count, "error") %> prohibited this allocation from being saved:</h2>
+
+      <ul>
+      <% @allocation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descriptiom %><br>
+    <%= f.text_area :descriptiom %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_id %><br>
+    <%= f.number_field :contract_id %>
+  </div>
+  <div class="field">
+    <%= f.label :debit %><br>
+    <%= f.text_field :debit %>
+  </div>
+  <div class="field">
+    <%= f.label :credit %><br>
+    <%= f.text_field :credit %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier_id %><br>
+    <%= f.number_field :supplier_id %>
+  </div>
+  <div class="field">
+    <%= f.label :analysis %><br>
+    <%= f.text_area :analysis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

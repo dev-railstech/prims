@@ -37,11 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :date_on %><br>
-    <%= f.date_select :date_on %>
+    <%= f.text_field :date_on, :class => 'datepicker' %>
   </div>
   <div class="field">
     <%= f.label :date_last_run %><br>
-    <%= f.date_select :date_last_run %>
+    <%= f.text_field :date_last_run, :class => 'datepicker' %>
   </div>
   <div class="field">
     <%= f.label :next_bill_no %><br>

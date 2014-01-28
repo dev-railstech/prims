@@ -1,0 +1,37 @@
+<h1>Listing allocations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descriptiom</th>
+      <th>Contract</th>
+      <th>Debit</th>
+      <th>Credit</th>
+      <th>Supplier</th>
+      <th>Analysis</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @allocations.each do |allocation| %>
+      <tr>
+        <td><%= allocation.descriptiom %></td>
+        <td><%= allocation.contract_id %></td>
+        <td><%= allocation.debit %></td>
+        <td><%= allocation.credit %></td>
+        <td><%= allocation.supplier_id %></td>
+        <td><%= allocation.analysis %></td>
+        <td><%= link_to 'Show', allocation %></td>
+        <td><%= link_to 'Edit', edit_allocation_path(allocation) %></td>
+        <td><%= link_to 'Destroy', allocation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Allocation', new_allocation_path %>

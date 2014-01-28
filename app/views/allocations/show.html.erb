@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descriptiom:</strong>
+  <%= @allocation.descriptiom %>
+</p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @allocation.contract_id %>
+</p>
+
+<p>
+  <strong>Debit:</strong>
+  <%= @allocation.debit %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @allocation.credit %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @allocation.supplier_id %>
+</p>
+
+<p>
+  <strong>Analysis:</strong>
+  <%= @allocation.analysis %>
+</p>
+
+<%= link_to 'Edit', edit_allocation_path(@allocation) %> |
+<%= link_to 'Back', allocations_path %>

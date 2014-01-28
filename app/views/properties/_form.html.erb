@@ -1,0 +1,217 @@
+<%= form_for(@property) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address_1 %><br>
+    <%= f.text_field :address_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address_2 %><br>
+    <%= f.text_field :address_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :address_3 %><br>
+    <%= f.text_field :address_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :address_4 %><br>
+    <%= f.text_field :address_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :post_code %><br>
+    <%= f.text_field :post_code %>
+  </div>
+  <div class="field">
+    <%= f.label :client_dx %><br>
+    <%= f.text_field :client_dx %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_1 %><br>
+    <%= f.text_field :tel_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_2 %><br>
+    <%= f.text_field :tel_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :client_fax %><br>
+    <%= f.text_field :client_fax %>
+  </div>
+  <div class="field">
+    <%= f.label :last_val %><br>
+    <%= f.text_field :last_val %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_price %><br>
+    <%= f.text_field :purchase_price %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_date %><br>
+    <%= f.text_field :purchase_date, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :last_val_date %><br>
+    <%= f.text_field :last_val_date, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_with %><br>
+    <%= f.text_field :loan_with %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_amount %><br>
+    <%= f.text_field :loan_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :vat %><br>
+    <%= f.check_box :vat %>
+  </div>
+  <div class="field">
+    <%= f.label :account_manager_id %><br>
+    <%= f.number_field :account_manager_id %>
+  </div>
+  <div class="field">
+    <%= f.label :portfolio %><br>
+    <%= f.number_field :portfolio %>
+  </div>
+  <div class="field">
+    <%= f.label :bought_from %><br>
+    <%= f.text_field :bought_from %>
+  </div>
+  <div class="field">
+    <%= f.label :total_value %><br>
+    <%= f.text_field :total_value %>
+  </div>
+  <div class="field">
+    <%= f.label :date_on %><br>
+    <%= f.text_field :date_on, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :client_dv %><br>
+    <%= f.text_field :client_dv, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_type %><br>
+    <%= f.number_field :contract_type %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_collect %><br>
+    <%= f.number_field :contract_collect %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_dealer %><br>
+    <%= f.number_field :contract_dealer %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_billed %><br>
+    <%= f.text_field :contract_billed %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_renew %><br>
+    <%= f.text_field :contract_renew, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :date_m_visit %><br>
+    <%= f.text_field :date_m_visit, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :last_person %><br>
+    <%= f.text_field :last_person %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_1 %><br>
+    <%= f.check_box :contract_vis_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_2 %><br>
+    <%= f.check_box :contract_vis_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_3 %><br>
+    <%= f.check_box :contract_vis_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_4 %><br>
+    <%= f.check_box :contract_vis_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_5 %><br>
+    <%= f.check_box :contract_vis_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_6 %><br>
+    <%= f.check_box :contract_vis_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_7 %><br>
+    <%= f.check_box :contract_vis_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_8 %><br>
+    <%= f.check_box :contract_vis_8 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_9 %><br>
+    <%= f.check_box :contract_vis_9 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_10 %><br>
+    <%= f.check_box :contract_vis_10 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_11 %><br>
+    <%= f.check_box :contract_vis_11 %>
+  </div>
+  <div class="field">
+    <%= f.label :contract_vis_12 %><br>
+    <%= f.check_box :contract_vis_12 %>
+  </div>
+  <div class="field">
+    <%= f.label :client_no_visits %><br>
+    <%= f.number_field :client_no_visits %>
+  </div>
+  <div class="field">
+    <%= f.label :property_sold %><br>
+    <%= f.check_box :property_sold %>
+  </div>
+  <div class="field">
+    <%= f.label :property_sold_date %><br>
+    <%= f.text_field :property_sold_date, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :property_sell_val %><br>
+    <%= f.text_field :property_sell_val %>
+  </div>
+  <div class="field">
+    <%= f.label :property_last_bill %><br>
+    <%= f.text_field :property_last_bill, :class => 'datepicker' %>
+  </div>
+  <div class="field">
+    <%= f.label :property_last_bill_val %><br>
+    <%= f.text_field :property_last_bill_val %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

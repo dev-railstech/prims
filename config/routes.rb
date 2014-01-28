@@ -1,4 +1,23 @@
 Prms::Application.routes.draw do
+
+  devise_for :users
+
+  resources :properties
+
+  resources :transactions
+
+  resources :let_types
+
+  resources :details
+
+  resources :bills
+
+  resources :payments
+
+  resources :collections
+
+  resources :allocations
+
   resources :products
 
   resources :nominals
@@ -7,8 +26,9 @@ Prms::Application.routes.draw do
 
   resources :account_managers
 
-  devise_for :users
   resources :companies
+
+  root 'companies#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

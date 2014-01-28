@@ -11,12 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140119170312) do
+ActiveRecord::Schema.define(version: 20140126190547) do
 
   create_table "account_managers", force: true do |t|
     t.string   "code"
     t.string   "name"
     t.date     "joining_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "allocations", force: true do |t|
+    t.text     "descriptiom"
+    t.integer  "contract_id"
+    t.float    "debit"
+    t.float    "credit"
+    t.integer  "supplier_id"
+    t.text     "analysis"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bills", force: true do |t|
+    t.integer  "company_id"
+    t.integer  "contract_id"
+    t.integer  "period"
+    t.integer  "item_id"
+    t.integer  "type"
+    t.integer  "collect"
+    t.integer  "discount"
+    t.integer  "unique"
+    t.integer  "number"
+    t.string   "yr"
+    t.string   "qty"
+    t.boolean  "vat"
+    t.boolean  "closed"
+    t.float    "val"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "collections", force: true do |t|
+    t.integer  "times"
+    t.text     "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,9 +94,40 @@ ActiveRecord::Schema.define(version: 20140119170312) do
     t.datetime "updated_at"
   end
 
+  create_table "details", force: true do |t|
+    t.text     "description"
+    t.integer  "vat_code"
+    t.float    "val"
+    t.string   "nom"
+    t.integer  "qty"
+    t.float    "item_val"
+    t.integer  "link"
+    t.date     "date_added"
+    t.integer  "plink"
+    t.boolean  "suspend"
+    t.string   "why"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "let_types", force: true do |t|
+    t.integer  "type"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "nominals", force: true do |t|
     t.string   "code"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payments", force: true do |t|
+    t.integer  "times"
+    t.text     "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,6 +137,73 @@ ActiveRecord::Schema.define(version: 20140119170312) do
     t.text     "description"
     t.string   "nom_code"
     t.float    "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", force: true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "address_3"
+    t.string   "address_4"
+    t.string   "post_code"
+    t.string   "client_dx"
+    t.string   "tel_1"
+    t.string   "tel_2"
+    t.text     "description"
+    t.string   "client_fax"
+    t.float    "last_val"
+    t.float    "purchase_price"
+    t.date     "purchase_date"
+    t.date     "last_val_date"
+    t.string   "loan_with"
+    t.float    "loan_amount"
+    t.boolean  "vat"
+    t.integer  "account_manager_id"
+    t.integer  "portfolio"
+    t.string   "bought_from"
+    t.float    "total_value"
+    t.date     "date_on"
+    t.date     "client_dv"
+    t.integer  "contract_type"
+    t.integer  "contract_collect"
+    t.integer  "contract_dealer"
+    t.float    "contract_billed"
+    t.date     "contract_renew"
+    t.date     "date_m_visit"
+    t.string   "last_person"
+    t.boolean  "contract_vis_1"
+    t.boolean  "contract_vis_2"
+    t.boolean  "contract_vis_3"
+    t.boolean  "contract_vis_4"
+    t.boolean  "contract_vis_5"
+    t.boolean  "contract_vis_6"
+    t.boolean  "contract_vis_7"
+    t.boolean  "contract_vis_8"
+    t.boolean  "contract_vis_9"
+    t.boolean  "contract_vis_10"
+    t.boolean  "contract_vis_11"
+    t.boolean  "contract_vis_12"
+    t.integer  "client_no_visits"
+    t.boolean  "property_sold"
+    t.date     "property_sold_date"
+    t.float    "property_sell_val"
+    t.date     "property_last_bill"
+    t.float    "property_last_bill_val"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transactions", force: true do |t|
+    t.date     "date"
+    t.string   "chq_no"
+    t.float    "debit"
+    t.float    "credit"
+    t.text     "description"
+    t.integer  "allocation_id"
+    t.string   "balance"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,4 @@
+json.array!(@properties) do |property|
+  json.extract! property, :id, :code, :name, :address_1, :address_2, :address_3, :address_4, :post_code, :client_dx, :tel_1, :tel_2, :description, :client_fax, :last_val, :purchase_price, :purchase_date, :last_val_date, :loan_with, :loan_amount, :vat, :account_manager_id, :portfolio, :bought_from, :total_value, :date_on, :client_dv, :contract_type, :contract_collect, :contract_dealer, :contract_billed, :contract_renew, :date_m_visit, :last_person, :contract_vis_1, :contract_vis_2, :contract_vis_3, :contract_vis_4, :contract_vis_5, :contract_vis_6, :contract_vis_7, :contract_vis_8, :contract_vis_9, :contract_vis_10, :contract_vis_11, :contract_vis_12, :client_no_visits, :property_sold, :property_sold_date, :property_sell_val, :property_last_bill, :property_last_bill_val
+  json.url property_url(property, format: :json)
+end

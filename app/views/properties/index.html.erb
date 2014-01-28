@@ -1,0 +1,78 @@
+<h1>Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <!--<th>Address 1</th>
+      <th>Address 2</th>
+      <th>Address 3</th>
+      <th>Address 4</th>
+      <th>Post code</th>        -->
+      <th>Client dx</th>
+     <!-- <th>Tel 1</th>
+      <th>Tel 2</th>
+      <th>Description</th>
+      <th>Client fax</th>
+      <th>Last val</th>    -->
+      <th>Purchase price</th>
+    <!--  <th>Purchase date</th>
+      <th>Last val date</th>
+      <th>Loan with</th>
+      <th>Loan amount</th>
+      <th>Vat</th>   -->
+      <th>Account manager</th>
+    <!--  <th>Portfolio</th>
+      <th>Bought from</th>
+      <th>Total value</th>
+      <th>Date on</th>
+      <th>Client dv</th>
+      <th>Contract type</th>
+      <th>Contract collect</th>
+      <th>Contract dealer</th>
+      <th>Contract billed</th>
+      <th>Contract renew</th>
+      <th>Date m visit</th>
+      <th>Last person</th>
+      <th>Contract vis 1</th>
+      <th>Contract vis 2</th>
+      <th>Contract vis 3</th>
+      <th>Contract vis 4</th>
+      <th>Contract vis 5</th>
+      <th>Contract vis 6</th>
+      <th>Contract vis 7</th>
+      <th>Contract vis 8</th>
+      <th>Contract vis 9</th>
+      <th>Contract vis 10</th>
+      <th>Contract vis 11</th>
+      <th>Contract vis 12</th>
+      <th>Client no visits</th>
+      <th>Property sold</th>
+      <th>Property sold date</th>
+      <th>Property sell val</th>
+      <th>Property last bill</th>
+      <th>Property last bill val</th>
+      <th></th>
+      <th></th>
+      <th></th>                        -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.code %></td>
+        <td><%= link_to property.name,property %></td>
+
+        <td><%= property.client_dx %></td>
+        <td><%= property.purchase_price %></td>
+        <td><%= property.account_manager_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_property_path %>

@@ -1,44 +1,36 @@
-<h1>Listing companies</h1>
+<h1>Companies</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Address 1</th>
+     <!-- <th>Address 1</th>
       <th>Address 2</th>
       <th>Address 3</th>
-      <th>Post code</th>
+      <th>Post code</th> -->
       <th>Current period</th>
       <th>Date on</th>
       <th>Date last run</th>
       <th>Next bill no</th>
       <th>Current year</th>
-      <th>Next contract number</th>
-      <th>Next allocation number</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <!--
+        <th>Next contract number</th>
+        <th>Next allocation number</th>
+      -->
     </tr>
   </thead>
 
   <tbody>
     <% @companies.each do |company| %>
       <tr>
-        <td><%= company.name %></td>
-        <td><%= company.address_1 %></td>
-        <td><%= company.address_2 %></td>
-        <td><%= company.address_3 %></td>
-        <td><%= company.post_code %></td>
+        <td><%= link_to company.name,company %></td>
+
         <td><%= company.current_period %></td>
         <td><%= company.date_on %></td>
         <td><%= company.date_last_run %></td>
         <td><%= company.next_bill_no %></td>
         <td><%= company.current_year %></td>
-        <td><%= company.next_contract_number %></td>
-        <td><%= company.next_allocation_number %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

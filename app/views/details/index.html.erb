@@ -1,0 +1,59 @@
+<h1>Listing details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Vat code</th>
+      <th>Val</th>
+      <th>Nom</th>
+      <th>Qty</th>
+      <th>Item val</th>
+      <th>Link</th>
+      <th>Date added</th>
+      <th>Plink</th>
+      <th>Suspend</th>
+      <th>Why</th>
+      <th>Date</th>
+      <th>Vat</th>
+      <th>Closed</th>
+      <th>Val</th>
+      <th>Date</th>
+      <th>Contract</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr>
+        <td><%= detail.description %></td>
+        <td><%= detail.vat_code %></td>
+        <td><%= detail.val %></td>
+        <td><%= detail.nom %></td>
+        <td><%= detail.qty %></td>
+        <td><%= detail.item_val %></td>
+        <td><%= detail.link %></td>
+        <td><%= detail.date_added %></td>
+        <td><%= detail.plink %></td>
+        <td><%= detail.suspend %></td>
+        <td><%= detail.why %></td>
+        <td><%= detail.date %></td>
+        <td><%= detail.vat %></td>
+        <td><%= detail.closed %></td>
+        <td><%= detail.val %></td>
+        <td><%= detail.date %></td>
+        <td><%= detail.contract_id %></td>
+        <td><%= link_to 'Show', detail %></td>
+        <td><%= link_to 'Edit', edit_detail_path(detail) %></td>
+        <td><%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detail', new_detail_path %>

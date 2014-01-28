@@ -9,8 +9,8 @@
       <a class="brand" href="/">PRIMS</a>
       <div class="container-fluid nav-collapse">
         <ul class="nav">
-          <li><%= link_to "Companies", companies_path  %></li>
-          <li><%= link_to "Property"  %></li>
+          <li class="<%= 'active' if params[:controller].eql?('companies') %>"><%= link_to "Companies", companies_path  %></li>
+          <li class="<%= 'active' if params[:controller].eql?('properties') %>"><%= link_to "Property", properties_path  %></li>
           <li><%= link_to "Contacts" %></li>
 
           <li class="dropdown">

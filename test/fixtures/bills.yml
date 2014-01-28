@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: 1
+  contract_id: 1
+  period: 1
+  item_id: 1
+  type: 1
+  collect: 1
+  discount: 1
+  unique: 1
+  number: 1
+  yr: MyString
+  qty: MyString
+  vat: false
+  closed: false
+  val: 1.5
+  date: 2014-01-26
+
+two:
+  company_id: 1
+  contract_id: 1
+  period: 1
+  item_id: 1
+  type: 1
+  collect: 1
+  discount: 1
+  unique: 1
+  number: 1
+  yr: MyString
+  qty: MyString
+  vat: false
+  closed: false
+  val: 1.5
+  date: 2014-01-26
